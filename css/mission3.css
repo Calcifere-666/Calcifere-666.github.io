@@ -1,0 +1,121 @@
+@font-face {
+    font-family: bold;
+    src: url(Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: boldd;
+    src: url(Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: regularr;
+    src: url(Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: lighty;
+    src: url(Montserrat-Light.ttf);
+}
+
+
+html {
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+
+* {
+    font-family: regular;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+/* ACCEUIL.HTML -------------------------------------------------------------------- */
+
+/* Navigation barre */
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 50px 90px;
+}
+
+nav h1 {
+    font-family: boldd;
+    font-size: 2.5em;
+    border-bottom: 1px solid;
+}
+
+nav h1:hover {
+    cursor: crosshair;
+}
+
+nav a {
+    font-family: lighty;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    font-weight: 900;
+    border-bottom: 1px solid;
+}
+
+/*style de mission*/
+.mission h2 {
+    width: fit-content;
+    font-family: boldd;
+    font-size: 1.5em;
+    border-bottom: 1px solid;
+    margin: 20px 150px;
+}
+.mission > p {
+    text-align: justify;
+
+    margin: 20px 25% 0 150px;
+}
+
+/*style des themes*/
+
+.theme{
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+.theme p {
+    margin: 20px 25% 0 150px;
+}
+/*dimension de l'image 1*/
+#indicateur1{
+    max-width: 300px;
+    padding: 20px;
+}
+
+.contenu-dessert{
+    display: flex;
+}
+.contenu-dessert p {
+    margin: 20px 2% 0 150px;
+}
+
+.contenu-dessert > li{
+    list-style: none;
+}
+
