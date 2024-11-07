@@ -102,20 +102,35 @@ nav a:hover {
 .theme p {
     margin: 20px 25% 0 150px;
 }
-/*dimension de l'image 1*/
-#indicateur1{
-    max-width: 300px;
-    padding: 20px;
+/*dimension de l'image */
+img{
+    margin: auto;
+    height: auto;
+    border-radius: 10px;
+    border-color:20px solid white;
+
 }
 
-.contenu-dessert{
+.contenu-indicateur{
     display: flex;
+    padding: 10px;
 }
-.contenu-dessert p {
-    margin: 20px 2% 0 150px;
+.contenu-indicateur p {
+    margin: 20px 2% auto 150px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.contenu-dessert > li{
+.contenu-indicateur img{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.contenu-indicateur > li{
     list-style: none;
 }
 
