@@ -215,14 +215,55 @@
                 <p>
                   Dans cette partie, nous avons étudié la clientèle de Kdou et les remises <br>
                   <br>
-
+                  Ce sont les sociétés qui proposent des produits qui ont que des remises de 10% ou 20% :
                 </p>
                 <div class="contenu-indicateur">
+                  <p>Code SQL : <br>
+                  <br>
+                    SELECT DISTINCT Produit.NomProd<br>
+                    FROM Produit INNER JOIN DetailCommande ON Produit.RefProd = DetailCommande.RefProd<br>
+                    WHERE DetailCommande.Remise In (0.1,0.2,0)
+                  </p>
+                  <img src="img/mission3/mission3-remise.png">
+                </div>
+                <hr>
+                <p>Cette requête sert au client <strong>Le verre à soi</strong> de savoir les autres clients nantais qui
+                commandent aussi en Allemagne por des futurs commandes groupées</p>
+                <div class="contenu-indicateur">
+                  <p>Code SQL : <br>
+                    SELECT Client.SocieteCli<br>
+                    FROM Client INNER JOIN Commande ON Client.CodeCli = Commande.CodeCli<br>
+                    WHERE Client.VilleCli = 'Nantes' AND Fournisseur.PaysFour = 'Allemagne';
 
+                  </p>
+                  <img src="img/mission3/mission3-groupe.png">
                 </div>
               </div>
+
             </li>
           </ol>
+          <!--Fin des requêtes SQL-->
+          <h2>Nos indicateurs </h2>
+          <p>Nous avons eu pour mission aussi de proposer des indicateurs comme ci-dessus afin
+          de faire évoluer Kdou</p>
+
+          <section class="theme">
+            <ol>
+              <li>
+                <h3>Premier indicateur</h3>
+              </li>
+              <li>
+                <h3>Deuxième indicateur</h3>
+              </li>
+              <li>
+                <h3>Troisième indicateur</h3>
+              </li>
+              <li>
+                <h3>Quatrième indicateur</h3>
+              </li>
+            </ol>
+
+          </section>
         </article>
     </main>
 
