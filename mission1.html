@@ -37,9 +37,236 @@
 
     <!-- Main : partie centrale du site -->
     <main>
-      <h1> Mission 1 </h1>
-        <article></article>
-    </main>
+     <!-- tronc de la page -->
+ <main>
+     <h1>Mission 1</h1>
+     <p>
+         La mission  1 a pour but d'analyser les données de l'entreprise KDou pour
+         ensuite se donner une image plus "éco-friendly" pour mieux se positionner par rapport à ses concurrents et augmenter son bénéfice.
+     </p>
+
+     <p>
+         Voici les questions qui nous sont donner pour mener a bien notre analyse pour cette mission:
+     </p>
+
+        <ul>
+            <li> 1. Clé primaire</li>
+         <li>2. Clé étrangère</li>
+         <li>3a.Combien y a-t-il de clients nantais ?</li>
+         <li>3b. Combien y a-t-il de clients de région parisienne ?</li>
+         <li>3c. Donnez l’adresse du fournisseur Marie Delamare?</li>
+         <li>3d. Combien y a-t-il de fournisseurs en Amérique du Nord ?</li>
+         <li>3e. Combien y a-t-il de pays dans l’UE autre que la France ?</li>
+         <li>3f. Quelle est la fonction du contact fournisseur Ma maison ?</li>
+         <li>3g. Quelle est la fonction de contact fournisseur la plus
+             représentée ?</li>
+         <li>3h. Quels produits (nom, catégorie et prix) a commandé le
+             client Mikal Pavbo ?</li>
+         <li>3i. Quelles sont les dates des commandes du client MORIU ?</li>
+         <li>3j. Donnez l’offre de produits suédois</li>
+         <li>3k. Quelles sont les catégories de produit vendues par les
+         fournisseurs Singapouriens ?</li>
+         <li>3l. Est-ce qu’il y a dans la clientèle des clients qui n’ont pas
+             passé de commande ?</li>
+         <li>3m. Comment sont conditionnés les produits ?</li>
+         <li>4. Analyse des données</li>
+         <li>5. Idées d’amélioration</li>
+     </ul>
+     <p>
+         1. Clé primaire  <!-- mettre en gras les question -->
+     </p>
+
+     <ul>
+     <li>Pour l’onglet « Fournisseur » : la colonne pouvant faire office de clé primaire est la colonne «
+         N° fournisseur ». La colonne « Adresse » ne peut pas faire office de clé primaire car il y a une
+         possibilité d’avoir des sociétés dans le même bâtiment (à la même adresse). De même pour la
+         colonne « Téléphone » si l’entreprise n’en a pas comme ligne 25.
+     </li>
+     <br>
+     <li> Pour l’onglet « Produit » : la colonne pouvant faire office de clé primaire est la colonne « Réf
+     produit ». Les autres, il y a soit des doublons, soit possibilité qu’il y en ait dans le temps.</li>
+     <br>
+     <li>Pour l’onglet « Categorie » : la colonne pouvant faire office de clé primaire est la colonne «
+         Code catégorie ». La colonne « Nom de catégorie » peut aussi faire office de clé primaire si on
+         fait bien attention aux doublons (ne pas avoir besoin de nommer 2 catégories par le même
+         nom). </li>
+     <br>
+     <li>Pour l’onglet « Clientele » : la colonne pouvant faire office de clé primaire est la colonne «
+         Code client ». Les autres, il y a soit des doublons, soit possibilité qu’il y en ait dans le temps.
+     </li>
+
+         <br>
+         <li>Pour l’onglet « Commande » : la colonne pouvant faire office de clé primaire est la colonne «
+             N° commande ». Les autres, il y a soit des doublons, soit possibilité qu’il y en ait dans le temps.
+         </li>
+
+         <br>
+         <li>Pour l’onglet « DetailCommande » : les colonnes pouvant faire office de clés primaires sont les
+             colonnes « N°Commande » avec « Ref Produit » (couple de clés primaires). En effet, pour une
+             même commande, il peut y avoir plusieurs produits et ces produits peuvent se retrouver dans
+             des commandes différentes
+         </li>
+     </ul>
+     <p>
+         2. Clé étrangère
+     </p>
+    <ul>
+        <li>
+            Pour l’onglet « Fournisseur » : il n’y a pas de clé étrangère.
+        </li><br>
+
+        <li> Pour l’onglet « Produit » : les colonnes « N° fournisseur » (Fournisseur) et « Code catégorie » (catégorie).
+        </li><br>
+        <li>
+            Pour l’onglet « Commande » : la colonne « Code client » (Client).
+        </li><br>
+        <li>
+        Pour l’onglet « DetailCommande » : les colonnes « N° commande » (Commande), « Réf
+        produit » (produit) et « Prix unitaire » (produit) si et seulement si le prix unitaire du client est
+        toujours le même que le prix unitaire du produit.
+        </li><br>
+        <li>Pour l’onglet « Client » : il n’y a pas de clé étrangère.</li>
+        <br>
+        <li>Pour l’onglet « Catégorie » : il n’y a pas de clé étrangère.
+        </li>
+    </ul>
+     <p>3a. Combien y a-t-il de clients nantais ?</p>
+     <ul>
+         <li>Depuis l’onglet « Clientèle », Il y a 3 clients nantais.</li>
+     </ul>
+     <br>
+<img src="images/img1.png" >
+
+
+<br>
+<p>3b. Combien y a-t-il de clients de région parisienne ?</p>
+<ul>
+<li> Il y a 3 clients de région parisienne.</li>
+</ul>
+<br>
+<img src="images/img2.png">
+<br>
+
+<p> 3c. Donnez l’adresse du fournisseur Marie Delamare ?</p>
+<ul>
+ <li> D’après l’onglet fournisseur, l’adresse est : « 22, rue H.Voiron » </li>
+    </ul>
+    <img src="images/img3.png">
+    <ul>
+        <li> Voici la demarche pour avoir ce resultat:</li>
+           </ul>
+    <img src="images/img4.png">
+
+<br>
+
+<p> 3d. Combien y a-t-il de fournisseurs en Amérique du Nord ?</p>
+ <ul>
+    <li> Il y a 7 fournisseurs:</li>
+ </ul>
+    <img src="images/img5.png">  
+           
+<ul>
+   <li> Voici la demarche pour avoir ce resultat: </li>
+</ul>
+    <img src="images/img6.png">       
+<br>
+
+<p> 3e. Combien y a-t-il de pays dans l’UE autre que la France ?</p>
+    <ul>
+      <li>Il y a 7 pays dans l’UE hors la France : Allemagne, Espagne, Finlande, Danemark, Italie, Pays-Bas et
+      Suède (pas Norvège).</li>
+    </ul>
+         <img src="images/img7.png">
+    <ul>
+      <li> Voici la demarche pour avoir ce resultat:</li>
+    </ul>
+         <img src="images/img8.png">
+<br>
+<p>3f. Quelle est la fonction du contact fournisseur Ma maison ?</p>
+<ul>
+    <li> D’après l’onglet « Fournisseur », la fonction du fournisseur « Ma maison » est « Directeur du
+        marketing ».</li>
+  </ul>
+        <img src="images/img9.png">
+  <ul>
+    <li> Voici la demarche pour avoir ce resultat:</li>
+  </ul>
+       <img src="images/img10.png">
+<br>
+<p>3g. Quelle est la fonction de contact fournisseur la plus représentée ?</p>
+   <ul>
+    <li>La fonction de contact fournisseur la plus représentée est Représentant(e) avec 7 si on ne
+        compte pas « Représentante » et 8 si on compte « Représentante ».</li>
+   </ul>
+       <img src="images/img11.png">
+<br>
+<p>3h. Quels produits (nom, catégorie et prix) a commandé le
+    client Mikal Pavbo ?</p>
+    <ul>
+        <li>Le client Mikal Pavbo n’existe pas dans le tableau clientèle : il existe par contre un client Mikal
+            Torin.</li>
+    </ul>
+        <img src="images/img12.png">
+<br>
+<p>3i. Quelles sont les dates des commandes du client MORIU ?</p>
+<ul>
+    <li>Le client MORIU indiqué dans l’énoncé n’existe pas dans la base de données mais il existe un
+        client nommé MORJU. Ce client a effectué des commandes le :</li>
+        03/12/2020
+        06/12/2020
+        27/12/2020
+        17/01/2021
+        20/02/2021
+        07/03/2021
+        11/03/2021
+        24/03/2021
+        24/04/2021
+        16/06/2021
+        30/06/2021
+</ul>
+<img src="images/img13.png">
+<br>
+<ul>
+    <li> Voici la demarche pour avoir ce resultat:</li>
+  </ul>
+  <img src="images/img14.png">
+<br>
+<p>3j. Donnez l’offre de produits suédois </p>  
+<ul>
+<li>D’après la table « Fournisseur » en sélectionnant dans l’attribut « Pays » les pays « Suéde » et « Suède » on trouve que leurs N° fournisseurs sont 9 et 17. Ensuite, dans la table « Produit » encherchant via les filtres les N° fournisseurs : on trouve que l’offre de produits suédois est : </li>
+   
+<li>TABLE FOURNISSEURS :</li>
+<img src="images/img15.png">
+</ul>
+
+<ul>
+    <li> Voici la demarche pour avoir ce resultat:</li>
+</ul>
+       <img src="images/img16.png">
+<br>
+<ul>
+    <li> TABLE PRODUITS :</li>
+</ul>
+  <img src="images/img17.png">
+  <ul>
+    <li> Voici la demarche pour avoir ce resultat:</li>
+</ul>
+<img src="images/img18.png">
+<br>
+<p>3k. Quelles sont les catégories de produit vendues par les
+    fournisseurs Singapouriens ?</p>
+    <p>Les catégories de produits vendues par les fournisseurs Singapouriens sont des boissons, et
+        des condiments. Ayant cherché d’abord dans la table fournisseurs avec le filtre « Singapour » dans
+        l’attribut-colonne « Pays » nous avons trouvé que le N° fournisseurs était 20. Ensuite, en cherchant
+        dans la table Produits avec le N° Fournisseurs (Clé étrangère) pour les produits Singapouriens nous
+        avons également trouvé que le N° de catégorie de chaque produit (1,2,2,2). Enfin, en comparant les N°
+        de catégories des produits de la table produits avec les N° de code catégories correspondant dans la
+        table Catégories on a trouvé la catégorie de produits vendues.</p>
+      <img src="" alt="">  
+   <article></article>
+<main/>
+
+   
 
     <!-- Footer : bas de page du site -->
     <footer>
