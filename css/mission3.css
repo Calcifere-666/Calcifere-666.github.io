@@ -1,49 +1,4 @@
-@font-face {
-    font-family: bold;
-    src: url(Poppins-Bold.ttf);
-}
 
-@font-face {
-    font-family: regular;
-    src: url(Poppins-Regular.ttf);
-}
-
-@font-face {
-    font-family: light;
-    src: url(Poppins-Light.ttf);
-}
-
-@font-face {
-    font-family: boldd;
-    src: url(Montserrat-Bold.ttf);
-}
-
-@font-face {
-    font-family: regularr;
-    src: url(Montserrat-Regular.ttf);
-}
-
-@font-face {
-    font-family: lighty;
-    src: url(Montserrat-Light.ttf);
-}
-
-
-html {
-    height: 100%;
-    background-color: black;
-    color: white;
-}
-
-
-* {
-    font-family: regular;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
-
-/* ACCEUIL.HTML -------------------------------------------------------------------- */
 
 /* Navigation barre */
 
@@ -111,6 +66,7 @@ img{
 
 }
 
+
 .contenu-indicateur{
     display: flex;
     padding: 10px;
@@ -132,5 +88,43 @@ img{
 
 .contenu-indicateur > li{
     list-style: none;
+}
+
+/*Responsive telephone*/
+
+@media only screen and (max-width: 880px) {
+    .mission h2{
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .mission p{
+        margin: 20px auto;
+        padding: 10px;
+    }
+    .the-mission {
+        display: none;
+    }
+    .theme{
+        display: flex;
+        justify-content: center;
+    }
+
+    .theme p {
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenu-indicateur{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    img{
+        margin: auto 10px;
+        max-width: 65%;
+    }
+
 }
 
