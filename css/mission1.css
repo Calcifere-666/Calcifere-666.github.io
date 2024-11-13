@@ -1,0 +1,127 @@
+/* Navigation barre */
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 50px 90px;
+}
+
+nav h1 {
+    font-family: boldd;
+    font-size: 2.5em;
+    border-bottom: 1px solid;
+}
+
+nav h1:hover {
+    cursor: crosshair;
+}
+
+nav a {
+    font-family: lighty;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    font-weight: 900;
+    border-bottom: 1px solid;
+}
+
+/*style de mission*/
+.mission h2 {
+    width: fit-content;
+    font-family: boldd;
+    font-size: 1.5em;
+    border-bottom: 1px solid;
+    margin: 20px 150px;
+}
+.mission > p {
+    text-align: justify;
+
+    margin: 20px 25% 0 150px;
+}
+
+/*style des themes*/
+
+.theme{
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+.theme p {
+    margin: 20px 25% 0 150px;
+}
+/*dimension de l'image */
+img{
+    margin: auto;
+    height: auto;
+    border-radius: 10px;
+    border-color:20px solid white;
+
+}
+
+
+.contenu-indicateur{
+    display: flex;
+    padding: 10px;
+}
+.contenu-indicateur p {
+    margin: 20px 2% auto 150px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contenu-indicateur img{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.contenu-indicateur > li{
+    list-style: none;
+}
+
+/*Responsive telephone*/
+
+@media only screen and (max-width: 880px) {
+    .mission h2{
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .mission p{
+        margin: 20px auto;
+        padding: 10px;
+    }
+    .the-mission {
+        display: none;
+    }
+    .theme{
+        display: flex;
+        justify-content: center;
+    }
+
+    .theme p {
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenu-indicateur{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    img{
+        margin: auto 10px;
+        max-width: 65%;
+    }
+
+}
