@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Kdou mission 1 </title>
+    <title> Kdou mission 1</title>
     <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/mission1.css" rel="stylesheet" />
     <script src="/js/icons.js"></script>
     <link rel="icon" type="image/x-icon" href="/img/logo.png" />
 </head>
@@ -13,23 +14,29 @@
 <body>
  <header>
      <nav>
-         <div class="logo-div">
+        <div class="logo-div">
              <h1>KDOU's INDUSTRY</h1>
-         </div>
-         <div class="nav-link-div">
+        </div>
+        <div class="nav-link-div">
              <a href="index.html">Accueil</a>
              <a href="mission1.html">Mission 1</a>
              <a href="mission2.html">Mission 2</a>
              <a href="mission3.html">Mission 3</a>
-         </div>
+        </div>
+        <div class="nav-link-div-responsive">
+        <i class="fa-solid fa-bars"></i>
+        <div class="menu-deroulant">
+        </div>
+        </div>
      </nav>
  </header>
 
 
  <!-- tronc de la page -->
  <main>
+    <article class="mission"></article>
      <h1>Mission 1</h1>
-     <p>
+     <p> Le contexte de la mission 1:
          La mission  1 a pour but d'analyser les données de l'entreprise KDou pour
          ensuite se donner une image plus "éco-friendly" pour mieux se positionner par rapport à ses concurrents et augmenter son bénéfice.
      </p>
@@ -37,34 +44,36 @@
      <p>
          Voici les questions qui nous sont donner pour mener a bien notre analyse pour cette mission:
      </p>
-
+     <div class="theme">
         <ul>
-         <li><strong>1. Clé primaire</strong></li>
-         <li><strong>2. Clé étrangère</strong></li>
-         <li><strong>3a.Combien y a-t-il de clients nantais ?</strong></li>
-         <li><strong>3b. Combien y a-t-il de clients de région parisienne ?</strong></li>
-         <li><strong>3c. Donnez l’adresse du fournisseur Marie Delamare?</strong></li>
-         <li><strong>3d. Combien y a-t-il de fournisseurs en Amérique du Nord ?</strong></li>
-         <li><strong>3e. Combien y a-t-il de pays dans l’UE autre que la France ?</strong></li>
-         <li><strong>3f. Quelle est la fonction du contact fournisseur Ma maison ?</strong></li>
-         <li><strong>3g. Quelle est la fonction de contact fournisseur la plus
-            représentée ?</strong></li>
-         <li><strong>3h. Quels produits (nom, catégorie et prix) a commandé le
-            client Mikal Pavbo ?</strong></li>
-         <li><strong>3i. Quelles sont les dates des commandes du client MORIU ?</strong></li>
-         <li><strong>3j. Donnez l’offre de produits suédois</strong></li>
-         <li><strong>3k. Quelles sont les catégories de produit vendues par les
+         <li>1. Clé primaire</li>
+         <li>2. Clé étrangère</li>
+         <li>3a.Combien y a-t-il de clients nantais ?</li>
+         <li>3b. Combien y a-t-il de clients de région parisienne ?</li>
+         <li>3c. Donnez l’adresse du fournisseur Marie Delamare?</li>
+         <li>3d. Combien y a-t-il de fournisseurs en Amérique du Nord ?</li>
+         <li>3e. Combien y a-t-il de pays dans l’UE autre que la France ?</li>
+         <li>3f. Quelle est la fonction du contact fournisseur Ma maison ?</li>
+         <li>3g. Quelle est la fonction de contact fournisseur la plus
+            représentée ?</li>
+         <li>3h. Quels produits (nom, catégorie et prix) a commandé le
+            client Mikal Pavbo ?</li>
+         <li>3i. Quelles sont les dates des commandes du client MORIU ?</li>
+         <li>3j. Donnez l’offre de produits suédois</li>
+         <li>3k. Quelles sont les catégories de produit vendues par les
             fournisseurs Singapouriens ?</strong></li>
-         <li><strong>Est-ce qu’il y a dans la clientèle des clients qui n’ont pas
-            passé de commande ?</strong></li>
-         <li><strong>3m. Comment sont conditionnés les produits ?</strong></li>
-         <li><strong>4. Analyse des données</strong></li>
-         <li><strong>5. Idées d’amélioration</strong></li>
+         <li>Est-ce qu’il y a dans la clientèle des clients qui n’ont pas
+            passé de commande ?</li>
+         <li>3m. Comment sont conditionnés les produits ?</li>
+         <li>4. Analyse des données</li>
+         <li>5. Idées d’amélioration</li>
      </ul>
-     <p>
-         <strong>1. Clé primaire </strong> <!-- mettre en gras les question -->
-     </p>
 
+     <p> Bilan sur l’étude des données: </p>
+     <p>
+        1. Clé primaire  <!-- mettre en gras les question -->
+     </p>
+     <div class="contenu-indicateur">
      <ul>
      <li>Pour l’onglet « Fournisseur » : la colonne pouvant faire office de clé primaire est la colonne «
          N° fournisseur ». La colonne « Adresse » ne peut pas faire office de clé primaire car il y a une
@@ -97,8 +106,9 @@
          </li>
      </ul>
      <p>
-        <strong>2. Clé étrangère</strong> 
+        2. Clé étrangère
      </p>
+     <div class="contenu-indicateur">
 <ul>
         <li>Pour l’onglet « Fournisseur » : il n’y a pas de clé étrangère. </li>
         <br>
@@ -115,8 +125,11 @@
         <br>
         <li>Pour l’onglet « Catégorie » : il n’y a pas de clé étrangère.</li>
 </ul>
-     <p><strong>3a. Combien y a-t-il de clients nantais ?</strong></p>
+     <p>3a. Combien y a-t-il de clients nantais ?</p>
+
+     <div class="theme"></div>
 <ul>
+    
          <li>Depuis l’onglet « Clientèle », Il y a 3 clients nantais.</li>
 </ul>
      <br>
@@ -124,7 +137,8 @@
 
 
     <br>
-<p><strong>3b. Combien y a-t-il de clients de région parisienne ?</strong></p>
+<p>3b. Combien y a-t-il de clients de région parisienne ?</p>
+<div class="contenu-indicateur">
 <ul>
     <li> Il y a 3 clients de région parisienne.</li>
 </ul>
@@ -132,7 +146,8 @@
 <img src="Mission 1/img2.png">
     <br>
 
-<p> <strong>3c. Donnez l’adresse du fournisseur Marie Delamare ?</strong></p>
+<p> 3c. Donnez l’adresse du fournisseur Marie Delamare ?</p>
+<div class="contenu-indicateur">
 <ul>
     <li> D’après l’onglet fournisseur, l’adresse est : « 22, rue H.Voiron » </li>
 </ul>
@@ -144,7 +159,8 @@
 
     <br>
 
-<p> <strong>3d. Combien y a-t-il de fournisseurs en Amérique du Nord ?</strong></p>
+<p> 3d. Combien y a-t-il de fournisseurs en Amérique du Nord ?</p>
+<div class="contenu-indicateur">
  <ul>
     <li> Il y a 7 fournisseurs:</li>
  </ul>
@@ -156,7 +172,8 @@
     <img src="Mission 1/img6.png">       
     <br>
 
-<p> <strong>3e. Combien y a-t-il de pays dans l’UE autre que la France ?</strong></p>
+<p> 3e. Combien y a-t-il de pays dans l’UE autre que la France ?</p>
+<div class="contenu-indicateur">
     <ul>
       <li>Il y a 7 pays dans l’UE hors la France : Allemagne, Espagne, Finlande, Danemark, Italie, Pays-Bas et
       Suède (pas Norvège).</li>
@@ -167,7 +184,8 @@
     </ul>
          <img src="Mission 1/img8.png">
     <br>
-<p><strong>3f. Quelle est la fonction du contact fournisseur Ma maison ?</strong></p>
+<p>3f. Quelle est la fonction du contact fournisseur Ma maison ?</p>
+<div class="contenu-indicateur">
 <ul>
     <li> D’après l’onglet « Fournisseur », la fonction du fournisseur « Ma maison » est « Directeur du
         marketing ».</li>
@@ -178,22 +196,25 @@
   </ul>
        <img src="Mission 1/img10.png">
     <br>
-<p> <strong>3g. Quelle est la fonction de contact fournisseur la plus représentée ?</strong></p>
+<p> 3g. Quelle est la fonction de contact fournisseur la plus représentée ?</p>
+<div class="contenu-indicateur">
    <ul>
     <li>La fonction de contact fournisseur la plus représentée est Représentant(e) avec 7 si on ne
         compte pas « Représentante » et 8 si on compte « Représentante ».</li>
    </ul>
        <img src="Mission 1/img11.png">
     <br>
-<p><strong> 3h. Quels produits (nom, catégorie et prix) a commandé le
-    client Mikal Pavbo ?</strong></p>
+<p> 3h. Quels produits (nom, catégorie et prix) a commandé le
+    client Mikal Pavbo ?</p>
+    <div class="contenu-indicateur">
     <ul>
         <li>Le client Mikal Pavbo n’existe pas dans le tableau clientèle : il existe par contre un client Mikal
             Torin.</li>
     </ul>
         <img src="Mission 1/img12.png">
     <br>
-<p><strong>3i. Quelles sont les dates des commandes du client MORIU ?</strong></p>
+<p>3i. Quelles sont les dates des commandes du client MORIU ?</p>
+<div class="contenu-indicateur">
 <ul>
     <li>Le client MORIU indiqué dans l’énoncé n’existe pas dans la base de données mais il existe un
         client nommé MORJU. Ce client a effectué des commandes le :</li>
@@ -216,7 +237,8 @@
 </ul>
   <img src="Mission 1/img14.png">
     <br>
-<p><strong>3j. Donnez l’offre de produits suédois</strong> </p>  
+<p>3j. Donnez l’offre de produits suédois </p> 
+<div class="contenu-indicateur"> 
 <ul>
 <li>D’après la table « Fournisseur » en sélectionnant dans l’attribut « Pays » les pays « Suéde » et « Suède » on trouve que leurs N° fournisseurs sont 9 et 17. Ensuite, dans la table « Produit » encherchant via les filtres les N° fournisseurs : on trouve que l’offre de produits suédois est : </li>
    
@@ -238,7 +260,8 @@
 </ul>
 <img src="Mission 1/img18.png">
     <br>
-<p><strong>3k. Quelles sont les catégories de produit vendues par les fournisseurs Singapouriens ?</strong></p>
+<p>3k. Quelles sont les catégories de produit vendues par les fournisseurs Singapouriens ?</p>
+<div class="contenu-indicateur">
 <p>Les catégories de produits vendues par les fournisseurs Singapouriens sont des boissons, et
         des condiments. Ayant cherché d’abord dans la table fournisseurs avec le filtre « Singapour » dans
         l’attribut-colonne « Pays » nous avons trouvé que le N° fournisseurs était 20. Ensuite, en cherchant
@@ -257,7 +280,8 @@
 <ul><li>Voici la demarche pour avoir ce resultat pour la TABLE CATÉGORIE: </li></ul>
 <img src="Mission 1/img21.png"/>
     <br>
-<p><strong>3l. Est-ce qu’il y a dans la clientèle des clients qui n’ont pas passé de commande ?</strong></p>
+<p>3l. Est-ce qu’il y a dans la clientèle des clients qui n’ont pas passé de commande ?</p>
+<div class="contenu-indicateur">
 
  <li>En effectuant un tableau dynamique avec les Code clients présents dans la table Clientèle, et
     un tableau dynamique avec les codes clients présents dans la table Commande pour voir quels codes
@@ -268,15 +292,34 @@
     une erreur de la base de données. </li>
 <img src="Mission 1/img22.png"/>
     <br>
-<p><strong>3m. Comment sont conditionnés les produits ?</strong></p>
+<p>3m. Comment sont conditionnés les produits ?</p>
+<div class="contenu-indicateur">
 <li>Les produits sont conditionnés d’une variété de manière :
     boîte, bouteille, carton, paquet, pot, sacs, canettes, verres, pièces, plaquettes, unités, tartes, tablettes
     et litres.
 </li>
+<br>
 <img src="Mission 1/img23.png"/>
 
+<div class="contenu-indicateur">
+    <p>En resume pour le bilan sur l’étude des donnée:</p>
+  <br>
+   <li>1.Clés Primaires et Clés Étrangères:
+    Clés Primaires : Chaque table comporte une clé primaire assurant l'unicité des enregistrements. Par exemple, dans la table Fournisseur, la clé primaire est le N° fournisseur, empêchant les doublons. De même, Produit utilise Réf produit pour distinguer chaque produit.
+    Clés Étrangères : Dans la table Produit, les colonnes N° fournisseur et Code catégorie sont des clés étrangères, établissant une relation avec les tables Fournisseur et Categorie, respectivement. 
+    Ces liens permettent de naviguer entre les tables et d’effectuer des recherches croisées.</li> 
     <br>
-<p><strong>4. Analyse des données</strong></p>
+    <li>2.Nombre de clients par région:
+    Trois clients sont identifiés comme étant de Nantes et trois autres de la région parisienne.
+    Détails spécifiques des fournisseurs et des clients :
+    Par exemple, le fournisseur Marie Delamare a l'adresse suivante : « 22, rue H.Voiron ».</li>
+    <br>
+    <li> 3.Incoherences:
+    Orthographe et Langue : La présence de langues et orthographes variées dans les noms des pays (ex. « Suéde » ou « Suède ») et des villes (« Paris » ou « paris ») renvoie donc des résultats faux lors de la saisie des filtres.
+    Prix et unité de stock : Des écarts entre les prix unitaires dans les tables Produit et DetailCommande indiquent des incohérences.
+    Clients sans commandes : Six clients identifiés dans la table Clientèle n’ont passé aucune commande, ce qui une anomalie dans la base.</li>
+   <br>
+<p>4. Analyse des données</p>
     <li>Il y a des erreurs d’orthographe dans le tableau fournisseurs car il semble que deux langues
     ont été utilisées : le Français et l’Anglais. De plus, un même pays est orthographié de plusieurs
     manières différentes ; c’est cela qui crée la répétition de certains pays. Ainsi, nous qui avons utilisé les
@@ -285,10 +328,12 @@
     a bel et bien 3 clients parisiens. L’erreur vient de l'orthographe de la ville Paris dans la table « Client »
     qui est orthographié « Paris » mais aussi « paris ».
     </li>
-<p><strong>5. Idées d’amélioration</strong></p>
+
+<div class="contenu-indicateur">
+<p>5. Perspective d’amélioration et conclusion</p>
     <br>
 <li>Comme idées d’amélioration nous pouvons ajouter / modifier / supprimer :</li>
-<ul>
+<div class="contenu-indicateur">
         <li>1. Dans la feuille « Produits », appliquer un tri de A à Z pour la colonne C (Catégorie du produit), cela
     permettrait de mieux visualiser les informations liées aux différents produits.
         </li>
@@ -306,7 +351,7 @@
                     <li>4. Concernant les fautes d’orthographes / d’accents / de tirets, l’utilisation d’une seule et même langue
             serait plus bénéfique. De plus l’utilisation des accents / tirets ne devrait pas être recommandée car
             cela crée des incohérences notamment Suéde / Suède ou encore Etats-Unis / Etats Unis (cf. ANNEXE).
-            De même pour les villes, Excel est « Case Sensitive » dans certains cas (les filtres par exemple), c’està-dire que les majuscules comptent, par exemple il y a 3 clients parisiens dans la feuille « Clientele »
+            De même pour les villes, Excel est « Case Sensitive » dans certains cas (les filtres par exemple), c’est à-dire que les majuscules comptent, par exemple il y a 3 clients parisiens dans la feuille « Clientele »
             mais seulement 2 sont affichés dans les analyses en ANNEXE car pour le code client FISSA (aka. Diego
             Roel) la ville est « paris » et non « Paris » ce qui fausse les résultats.
                     </li>
@@ -320,8 +365,13 @@
                             </li>
                                 <li>7. Pour faciliter la lecture de la feuille « Produit », lorsque les unités en stock sont à 0, un code couleur
                         (rouge pour 0 et vert pour >0) serait bénéfique. Les cases ne devraient aussi pas pouvoir être vides.
-                                </li>
+                                </li>                           
 </ul> 
+<div class="theme">
+<li>Conclusion:</li>
+<p>L'analyse des données de l'entreprise KDou met en évidence plusieurs points essentiels pour optimiser la gestion de sa base de données. 
+    Les clés primaires et étrangères sont correctement définies, assurant l'intégrité des relations entre les tables. 
+    Pourtant on retrouve des incohérences dans l'orthographe et le format des données qui perturbent nos resultat,comme l'exemple des noms de pays et des villes.</p>
 
 <main/>
 
