@@ -194,7 +194,7 @@
                   les résultats.
                 </p>
                 <div class="contenu-indicateur">
-                  <p>
+                  <p>Code SQL : <br><br>
                     SELECT DISTINCT P.NoFour, P.NomProd, F.Societe<br>
                     FROM Produit AS P, Fournisseur AS F<br>
                     WHERE P.CodeCateg = 1<br>
@@ -251,15 +251,66 @@
             <ol>
               <li>
                 <h3>Premier indicateur</h3>
+                <p>Cette requête aide KDou à identifier les clients les plus éloignés, permettant ainsi de planifier
+                  des livraisons optimisées. En regroupant ou en espaçant les livraisons pour ces clients, KDou
+                  peut réduire les trajets fréquents, diminuant les coûts logistiques et l'empreinte carbone liée au
+                  transport, contribuant ainsi à ses engagements environnementaux et économiques.</p>
+                <div class="contenu-indicateur">
+                  <p>Code SQL :<br><br>
+                    SELECT Client.SocieteCli, AVG(Commande.DistanceLivraison) AS DistanceMoyenne<br>
+                    FROM Client INNER JOIN Commande ON Client.CodeCli = Commande.CodeCli<br>
+                    GROUP BY Client.SocieteCli;</p>
+                  <img src="img/mission3/mission3-indicateur1.png">
+                </div>
               </li>
+              <hr>
               <li>
                 <h3>Deuxième indicateur</h3>
+                <p>Cet indicateur sert à calculer le chiffre d’affaire de toutes les catégories en non que celle des boissons et
+                  desserts.
+                </p>
+                <div class="contenu-indicateur">
+                  <p>Code SQL : <br><br>
+                    SELECT SUM(D.PrixUnitCli * D.QteCom) AS chiffreaffaire, C.NomCateg<br>
+                    FROM categorie AS C, fournisseur AS F, produit AS P, detailcommande AS D<br>
+                    WHERE P.NoFour = F.NoFour<br>
+                    AND D.RefProd = P.RefProd<br>
+                    AND C.CodeCateg = P.CodeCateg<br>
+                    AND C.NomCateg LIKE "Desserts"<br>
+                    GROUP BY C.NomCateg;</p>
+                </div>
               </li>
+              <hr>
               <li>
                 <h3>Troisième indicateur</h3>
+                <p>Cet indicateur sert à identifier les produits dont la quantité en stock (QteParUnite) est inférieure à un
+                  certain seuil (p.e, 10 unités). Pour pouvoir anticiper des ruptures de stock et de passer des
+                  commandes auprès des fournisseurs concernés</p>
+                <div class="contenu-indicateur">
+                  <p>Code SQL : <br><br>
+                    SELECT Produit.NomProd, Produit.QteParUnite, Fournisseur.Societe, Fournisseur.Pays<br>
+                    FROM Produit P<br>
+                    JOIN Fournisseur F ON P.NoFour = F.NoFour<br>
+                    WHERE P.QteParUnite < 10;</p>
+                </div>
               </li>
+              <hr>
               <li>
                 <h3>Quatrième indicateur</h3>
+                <p>Cet indicateur indique les produits et leurs nombres de quantité vendus, avec ce chiffre, on pourrait mettre en
+                  valeur certains produits et agrandir leurs stocks ou au contraire réduire ceux qu'ils n'ont pas
+                  beaucoup de commande afin d'avoir un maximum de rendement au lieu d'avoir du stock pour
+                  rien et perdre de l'argent.</p>
+                <div class="contenu-indicateur">
+                  <p>Code SQL: <br><br>
+                    SELECT Fournisseur.Pays, Count([2c Sr].RefProd) AS NBProdVendu, Sum(Produit.UniteStock)
+                    AS NbStockProd<br>
+                    FROM Fournisseur INNER JOIN ([2c Sr] INNER JOIN Produit ON [2c Sr].RefProd =<br>
+                    Produit.RefProd) ON Fournisseur.NoFour = Produit.NoFour<br>
+                    GROUP BY Fournisseur.Pays<br>
+                    ORDER BY Count([2c Sr].RefProd) DESC;
+                  </p>
+                </div>
               </li>
             </ol>
 
