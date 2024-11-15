@@ -16,8 +16,3 @@ ne pas seulement double-click le site en local mais utiliser "LiveServer" (ou re
 pour simuler un serveur (permet les /... dans les href)
 
 Bonne Lecture ! Si vous avez des questions : timeo.pineau@gmail.com
-
-      |\      _,,,---,,_
-ZZZzz /,`.-'`'    -.  ;-;;,_
-     |,4-  ) )-,_. ,\ (  `'-'
-    '---''(_/--'  `-'\_)
