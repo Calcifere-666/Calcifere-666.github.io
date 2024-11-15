@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kdou - Mission 3</title>
+    <meta name="description" content="Mission 3 de Kdou. Cette mission étudie l'offre et les clients de Kdou. En effet, dans cette mission, Kdou veut se tourner vers une politique plus environnementale et essaie de trouver des indicateurs pour améliorer Kdou.">
+    <link rel="icon" type="image/x-icon" href="/kdou.png">
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    <!-- Header : Haut de page -->
+    <nav>
+        <div class="nav-top">
+            <div>
+                <h1>KDOU's INDUSTRY</h1>
+            </div>
+        </div>
+        <div class="parts">
+            <div class="dropdown">
+                <a href="/index.html" class="abtn">Accueil</a>
+                <div class="dropdown-content">
+                    <a href="/index.html#article1">Notre Équipe</a>
+                    <a href="/index.html#article2">Nos Missions</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="/mission1/index.html" class="abtn">Mission 1</a>
+                <div class="dropdown-content">
+                    <a href="/mission1/index.html#article1">Le contexte</a>
+                    <a href="/mission1/index.html#article2">Bilan structuré</a>
+                    <a href="/mission1/index.html#article3">Analyse</a>
+                    <a href="/mission1/index.html#article4">Améliration</a>
+                    <a href="/mission1/index.html#article5">Conclusion</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="/mission2/index.html" class="abtn">Mission 2</a>
+                <div class="dropdown-content">
+                    <a href="/mission2/index.html#article1">Indicateur 1</a>
+                    <a href="/mission2/index.html#article2">Indicateur 2</a>
+                    <a href="/mission2/index.html#article3">Indicateur 3</a>
+                    <a href="/mission2/index.html#article4">Indicateur 4</a>
+                    <a href="/mission2/index.html#article5">Indicateur 5</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="/mission3/index.html" class="abtn">Mission 3</a>
+                <div class="dropdown-content-right">
+                    <a href="/mission3/index.html#article1">Desserts et Boissons</a>
+                    <a href="/mission3/index.html#article2">L'offre de Kdou</a>
+                    <a href="/mission3/index.html#article3">Provenance des produits</a>
+                    <a href="/mission3/index.html#article4">La clientèle</a>
+                    <a href="/mission3/index.html#article5">Proposition d'indicateur</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="/rapport/index.html" class="abtn">Rapport</a>
+                <div class="dropdown-content-right">
+                    <a href="/rapport/index.html#article1">Outils utilisés</a>
+                    <a href="/rapport/index.html#article2">Analyse des données</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="top">
+        <div class="img-roulant" id="img-roulant">
+            <h1>MISSION <br> III</h1>
+        </div>
+    </header>
+
+
+    <!-- Main : contenu principal -->
+    <main>
+        <article id="article1">
+            <h1 class="mainh1">Desserts et Boissons</h1>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                     <table>
+                        <tr>
+                            <th>chiffreaffaire</th>
+                            <th>NomCateg</th>
+                        </tr>
+                        <tr>
+                            <td>207 326,70€</td>
+                            <td>Desserts</td>
+                        </tr>
+                        <tr>
+                            <td>360 309,75€</td>
+                            <td>Boissons</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p><b> On veut le chiffre d’affaires généré par catégorie desserts ou catégorie : </b><br>
+                            Cette requête est importante si Kdou veut savoir combien génèrent-t-il
+                            et les aider à investir ou réduire selon leur politique. Code SQL : </p>
+                        <p class="code">
+                            SELECT SUM(D.PrixUnitCli * D.QteCom) AS chiffreaffaire, C.NomCateg <br>
+                            FROM categorie AS C, fournisseur AS F, produit AS P, detailcommande AS D <br>
+                            WHERE P.NoFour = F.NoFour <br>
+
+                            AND D.RefProd = P.RefProd <br>
+                            AND C.CodeCateg = P.CodeCateg <br>
+                            AND C.NomCateg LIKE "Desserts" <br>
+                            GROUP BY C.NomCateg; <br><br>
+
+                            UNION ALL SELECT SUM(D.PrixUnitCli * D.QteCom) AS chiffreaffaire, C.NomCateg <br>
+                            FROM categorie AS C, fournisseur AS F, produit AS P, detailcommande AS D <br>
+                            WHERE P.NoFour = F.NoFour <br>
+                            AND D.RefProd = P.RefProd <br>
+                            AND C.CodeCateg = P.CodeCateg <br>
+                            AND C.NomCateg LIKE "Boissons" <br>
+                            GROUP BY C.NomCateg;
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <table>
+                        <tr>
+                            <th>NomProd</th>
+                            <th>NombrePro</th>
+                        </tr>
+                        <tr>
+                            <td>Rhonbrau Klos</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Pimm's jojo</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Steeleye</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Côte de Blaye</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Sir Rodney's</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Bratislava</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Chang</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jus Kiwina</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>8</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p>On veut savoir combien y a-t-il de produits correspondants vendus 50€ ou plus et leur pays d’origine.
+                            Cet indicateur nous permet de savoir quel pays achète des produits plutôt coûteux.</p>
+                        <p class="code">
+                            SELECT Pays, NomProd, NomCateg, NULL AS NombreProduit<br>
+                            FROM Fournisseur F
+                            INNER JOIN (Produit AS P1 INNER JOIN Categorie AS C1 ON P1.CodeCateg =
+                            C1.CodeCateg ) ON F.NoFour = P1.NoFour<br>
+                            WHERE (NomCateg LIKE "Desserts" OR NomCateg LIKE "Boissons") AND (PrixUnit >=
+                            50)<br>
+                            GROUP BY Pays, NomProd, NomCateg<br><br>
+
+                            UNION ALL SELECT NULL as Pays, NULL as NomProd, NULL as NomCateg, COUNT(*)
+                            AS NombreProduit<br>
+                            FROM Fournisseur F<br>
+                            INNER JOIN (Produit AS P1 INNER JOIN Categorie AS C1 ON P1.CodeCateg =
+                            C1.CodeCateg ) ON F.NoFour = P1.NoFour<br>
+                            WHERE (NomCateg LIKE "Desserts" OR NomCateg LIKE "Boissons") AND (PrixUnit >=
+                            50);<br>
+                            <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-----------------Offre de KDou --------------------->
+        <article id="article2">
+            <h1 class="mainh1">L'offre de Kdou</h1>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <table>
+                        <tr>
+                            <th>Societe</th>
+                            <th>Contact</th>
+                        </tr>
+                        <tr>
+                            <td>Edwin Liquids</td>
+                            <td>Paul Smithy</td>
+                        </tr>
+                        <tr>
+                            <td>Exotic Liquids</td>
+                            <td>Alyssa Messeta</td>
+                        </tr>
+                        <tr>
+                            <td>Faro Madeiras</td>
+                            <td>Claudio Goulet</td>
+                        </tr>
+                        <tr>
+                            <td>Forêts d'érables</td>
+                            <td>Chantal Goulet</td>
+                        </tr>
+                        <tr>
+                            <td>G'day, Mate</td>
+                            <td>Wendy Mackenzie</td>
+                        </tr>
+                        <tr>
+                            <td>Globalins</td>
+                            <td>Bob Rego</td>
+                        </tr>
+                        <tr>
+                            <td>Leka Trading</td>
+                            <td>Chandra Leka</td>
+                        </tr>
+                        <tr>
+                            <td>Losad</td>
+                            <td>Hug Jhonson</td>
+                        </tr>
+                        <tr>
+                            <td>New Orleans...</td>
+                            <td>Shelley Burke</td>
+                        </tr>
+                        <tr>
+                            <td>PB Knackebrod AB</td>
+                            <td>Lars Peterson</td>
+                        </tr>
+                        <tr>
+                            <td>Perdigao</td>
+                            <td>Helena Carbo</td>
+                        </tr>
+                        <tr>
+                            <td>Referscos LTDA</td>
+                            <td>Carlos Diaz</td>
+                        </tr>
+                        <tr>
+                            <td>Westpac Corpo</td>
+                            <td>Charlie Colley</td>
+                        </tr>
+                    </table>
+                    <table>         
+                        <tr>
+                            <th>Fonction</th>
+                            <th>Adresse</th>
+                        </tr>
+                        <tr>
+                            <td>Respsonsable de zone</td>
+                            <td>11 Hickson Road</td>
+                        </tr>
+                        <tr>
+                            <td>Assisstant export</td>
+                            <td>49 Gillbert St.</td>
+                        </tr>
+                        <tr>
+                            <td>Chef des ventes</td>
+                            <td>Praça da Repùblica N80 Sala 305</td>
+                        </tr>
+                        <tr>
+                            <td>Chef des ventes</td>
+                            <td>148 rue Chasseur</td>
+                        </tr>
+                        <tr>
+                            <td>Représant(e)</td>
+                            <td>170 Prince Edward Parade</td>
+                        </tr>
+                        <tr>
+                            <td>Représant(e)</td>
+                            <td>5 Saint De Pierre</td>
+                        </tr>
+                        <tr>
+                            <td>Proprétaire</td>
+                            <td>471 Serangoon Loop</td>
+                        </tr>
+                        <tr>
+                            <td>Acheteur</td>
+                            <td>P.O. Box 78934</td>
+                        </tr>
+                        <tr>
+                            <td>Assisstant(e) ventes</td>
+                            <td>Kalodagatan 13</td>
+                        </tr>
+                        <tr>
+                            <td>Représentant</td>
+                            <td>Av. das Meraos 12.890</td>
+                        </tr>
+                        <tr>
+                            <td>Directeur du marketing</td>
+                            <td>Av. das Americanas 12.890</td>
+                        </tr>
+                        <tr>
+                            <td>Acheteur</td>
+                            <td>254 King's Way Old</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p><b> Dans le grand 1, on cherche à comprendre l’impact sur la santé des produits que proposent
+                                Kdou. Cette requête nous permet donc de pouvoir comparer les chiffres d’affaires de ces
+                                différentes catégories de produits afin d’en savoir plus sur les différents envies de
+                                nos clients
+                                par catégories : </b><br>
+                            Ce sont les résultats auxquels les fournisseurs qui ont des produits qui n'ont jamais été
+                            commandés.
+                            On pourrait utiliser ces informations afin de trouver d'autres fournisseurs qui n'ont que
+                            des produits vendus pour éviter les pertes, ou bien dire aux fournisseurs qu'ils ont des
+                            produits non vendus.
+                            Code SQL : </p>
+                        <p class="code">
+                            SELECT DISTINCT F.Societe, F.Contact, F.Fonction, F.Adresse<br>
+                            FROM Fournisseur AS F INNER JOIN Produit AS P ON F.NoFour = P.NoFour<br>
+                            WHERE (((Exists (SELECT DC.RefProd<br>
+                            FROM DetailCommande AS DC<br>
+                            WHERE DC.RefProd = P.RefProd)) =False));
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <table>         
+                        <tr>
+                            <th>NomCateg</th>
+                            <th>NbProduitN</th>
+                        </tr>
+                        <tr>
+                            <td>Boissons</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>Condiments</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Desserts</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Pâtes et céréales</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Poissons et fruits de mer</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p><b> Donner des informations sur les fournisseurs qui proposent des produits qui ne sont pas
+                                commandés actuellement ? </b><br>
+                            Ce sont les nombres de produits non vendus par catégorie donc on peut dire aux fournisseurs
+                            que dans ces catégories de produits il y a tant de produits non vendus et réaction, réajusté
+                            les stocks par rapport à la catégorie, produire plus si la catégorie a peu de produits non
+                            vendus.
+                            Code SQL : </p>
+                        <p class="code">
+                            sous-requête : <br><br>
+                            SELECT C.NomCateg, P.RefProd<br>
+                            FROM (Categorie AS C INNER JOIN Produit AS P ON C.CodeCateg = P.CodeCateg) LEFT
+                            JOIN DetailCommande AS DC ON P.RefProd = DC.RefProd<br>
+                            WHERE DC.RefProd IS NULL;<br>
+                            <br>
+                            <br>
+                            requête : <br><br>
+                            SELECT [2b sous requête].NomCateg, Count([2b sous requête].RefProd) AS
+                            NbProduitNonVendu<br>
+                            FROM [2b sous requête]<br>
+                            GROUP BY [2b sous requête].NomCateg;
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="article3">
+            <h1 class="mainh1">Provenance des produits</h1>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <table>         
+                        <tr>
+                            <th>Societe</th>
+                        </tr>
+                        <tr>
+                            <td>Specialty Biscuits, Ltd.</td>
+                        </tr>
+                        <tr>
+                            <td>Refrescos Americanas LTDA</td>
+                        </tr>
+                        <tr>
+                            <td>Heli SuBwaren GmbH & Co, KG</td>
+                        </tr>
+                        <tr>
+                            <td>Aux joyeyx ecclésiastiques</td>
+                        </tr>
+                        <tr>
+                            <td>Zaanse Snoepfabriek</td>
+                        </tr>
+                        <tr>
+                            <td>Karkki Oy</td>
+                        </tr>
+                        <tr>
+                            <td>Faro Madeiras</td>
+                        </tr>
+                        <tr>
+                            <td>Westpac Corporation</td>
+                        </tr>
+                        <tr>
+                            <td>Perdigao</td>
+                        </tr>
+                        <tr>
+                            <td>Globalis</td>
+                        </tr>
+                        <tr>
+                            <td>Losad</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p>
+                            Voici les résultats des fournisseurs qui vendent
+                            uniquement des boissons et desserts. Code SQL :</p>
+                        <p class="code">
+                            SELECT Fournisseur.Societe<br>
+                            FROM Fournisseur<br>
+                            WHERE NoFour NOT IN (
+                            SELECT DISTINCT Produit.NoFour<br>
+                            FROM Produit<br>
+                            WHERE Produit.CodeCateg NOT IN (1, 3)
+                            )<br>
+                            AND NoFour IN (<br>
+                            SELECT DISTINCT Produit.NoFour<br>
+                            FROM Produit<br>
+                            WHERE Produit.CodeCateg IN (1, 3) );E "Boissons" <br>
+                            GROUP BY C.NomCateg;
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <table>         
+                        <tr>
+                            <th>NoFour</th>
+                            <th>NomProd</th>
+                            <th>Societe</th>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Outback Lager</td>
+                            <td>Pavlova</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Cachaça Mikala</td>
+                            <td>Refrescos Americanas</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Guarana Fantastica</td>
+                            <td>Refrescos Americanas</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Guarana Marvesa</td>
+                            <td>Refrescos Americanas</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Lakkalikoori</td>
+                            <td>Krakki Oy</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Jus d'érable d'or</td>
+                            <td>Forêts d'érables</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Sugar bleu blanc</td>
+                            <td>Forêts d'érables</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p><b> Quels sont les pays de provenance de ces catégories ? : </b><br>
+                            Cet indicateur nous permet de savoir quel pays achète des produits plutôt coûteux.
+                            Code SQL : </p>
+                        <p class="code">
+                            SELECT DISTINCT P.NoFour, P.NomProd, F.Societe<br>
+                            FROM Produit AS P, Fournisseur AS F<br>
+                            WHERE P.CodeCateg = 1<br>
+                            AND F.NoFour = P.NoFour<br>
+                            AND P.NoFour IN (<br>
+                            SELECT DISTINCT P.NoFour<br>
+                            FROM Produit AS P<br>
+                            WHERE P.CodeCateg = 3
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="article4">
+            <h1 class="mainh1">La clientèle</h1>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <table>         
+                        <tr>
+                            <th>SocieteCli</th>
+                        </tr>
+                        <tr>
+                            <td>Le Nostradamus</td>
+                        </tr>
+                        <tr>
+                            <td>Bistro gare</td>
+                        </tr>
+                        <tr>
+                            <td>ChefFamilla</td>
+                        </tr>
+                        <tr>
+                            <td>Chez Bouxou</td>
+                        </tr>
+                        <tr>
+                            <td>Chez Kév</td>
+                        </tr>
+                        <tr>
+                            <td>ChopsTang</td>
+                        </tr>
+                        <tr>
+                            <td>Crêperie de la gare</td>
+                        </tr>
+                        <tr>
+                            <td>Délices d'Agen</td>
+                        </tr>
+                        <tr>
+                            <td>Food quartier</td>
+                        </tr>
+                        <tr>
+                            <td>La Maison Dans Le Parc</td>
+                        </tr>
+                        <tr>
+                            <td>La Table du Gourmet</td>
+                        </tr>
+                        <tr>
+                            <td>L'ancienne Auberge</td>
+                        </tr>
+                        <tr>
+                            <td>Le Bouffi</td>
+                        </tr>
+                        <tr>
+                            <td>Le clos bisontin</td>
+                        </tr>
+                        <tr>
+                            <td>Le Pain bis</td>
+                        </tr>
+                        <tr>
+                            <td>Le Pavillon des Bouleva</td>
+                        </tr>
+                        <tr>
+                            <td>Le Petit Hôtel du Grand</td>
+                        </tr>
+                        <tr>
+                            <td>Lille table</td>
+                        </tr>
+                        <tr>
+                            <td>Mendel table</td>
+                        </tr>
+                        <tr>
+                            <td>Pâtes à succès</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro's house</td>
+                        </tr>
+                        <tr>
+                            <td>RestauToqué</td>
+                        </tr>
+                        <tr>
+                            <td>Riz de Caen</td>
+                        </tr>
+                        <tr>
+                            <td>Speedy plate</td>
+                        </tr>
+                        <tr>
+                            <td>Table nantaise</td>
+                        </tr>
+                        <tr>
+                            <td>Une petite faim</td>
+                        </tr>
+                        <tr>
+                            <td>Verre à soi</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p><b>Dans cette partie, nous avons étudié la clientèle de Kdou et les remises :</b><br>
+                            Ce sont les sociétés qui proposent des produits qui n'ont que des remises de 10% ou 20%. Code
+                            SQL :</p>
+
+                        <p class="code">
+                            SELECT DISTINCT Produit.NomProd<br>
+                            FROM Produit INNER JOIN DetailCommande ON Produit.RefProd = DetailCommande.RefProd<br>
+                            WHERE DetailCommande.Remise In (0.1,0.2,0)
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <table>         
+                        <tr>
+                            <th>SocieteCli</th>
+                        </tr>
+                        <tr>
+                            <td>Pedro's house</td>
+                        </tr>
+                        <tr>
+                            <td>Table nantaise</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <p>
+                            Cette requête sert au client <strong>Le verre à soi</strong> de savoir les autres clients
+                            nantais qui
+                            commandent aussi en Allemagne por des futures commandes groupées.
+                            Code SQL : </p>
+                        <p class="code">
+                            SELECT Client.SocieteCli<br>
+                            FROM Client INNER JOIN Commande ON Client.CodeCli = Commande.CodeCli<br>
+                            WHERE Client.VilleCli = 'Nantes' AND Fournisseur.PaysFour = 'Allemagne';
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="article5">
+            <h1 class="mainh1">Proposition d'indicateur</h1>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <div>
+                        <p><b>Nous avons eu pour mission aussi de proposer des indicateurs comme ci-dessus afin de
+                                faire évoluer Kdou :</b><br>
+                            Cette requête aide KDou à identifier les clients les plus éloignés, permettant ainsi de
+                            planifier
+                            des livraisons optimisées. En regroupant ou en espaçant les livraisons pour ces clients,
+                            KDou
+                            peut réduire les trajets fréquents, diminuant les coûts logistiques et l'empreinte carbone
+                            liée au
+                            transport, contribuant ainsi à ses engagements environnementaux et économiques. Code SQL :
+                        </p>
+
+                        <p class="code">
+                            SELECT Client.SocieteCli, AVG(Commande.DistanceLivraison) AS DistanceMoyenne<br>
+                            FROM Client INNER JOIN Commande ON Client.CodeCli = Commande.CodeCli<br>
+                            GROUP BY Client.SocieteCli;
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <div>
+                        <p>
+                            Cet indicateur sert à calculer le chiffre d’affaires de toutes les catégories en non que
+                            celle des boissons et
+                            desserts.
+                            Code SQL : </p>
+                        <p class="code">
+                            SELECT SUM(D.PrixUnitCli * D.QteCom) AS chiffreaffaire, C.NomCateg<br>
+                            FROM categorie AS C, fournisseur AS F, produit AS P, detailcommande AS D<br>
+                            WHERE P.NoFour = F.NoFour<br>
+                            AND D.RefProd = P.RefProd<br>
+                            AND C.CodeCateg = P.CodeCateg<br>
+                            AND C.NomCateg LIKE "Desserts"<br>
+                            GROUP BY C.NomCateg;
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+                    <div>
+                        <p>
+                            Cet indicateur sert à identifier les produits dont la quantité en stock (QteParUnite) est
+                            inférieure à un
+                            certain seuil (p.e, 10 unités). Pour pouvoir anticiper des ruptures de stock et de passer
+                            des
+                            commandes auprès des fournisseurs concernés.
+                            Code SQL : </p>
+                        <p class="code">
+                            SELECT Produit.NomProd, Produit.QteParUnite, Fournisseur.Societe, Fournisseur.Pays<br>
+                            FROM Produit P<br>
+                            JOIN Fournisseur F ON P.NoFour = F.NoFour<br>
+                            WHERE P.QteParUnite &lt; 10; </p>
+                                <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollanimation scrollanimation2">
+                <div class="category category-1">
+
+                    <div>
+                        <p>
+                            Cet indicateur indique les produits et leur nombre de quantité vendus. Avec ce chiffre, on
+                            pourrait mettre en
+                            valeur certains produits et agrandir leurs stocks, ou au contraire réduire ceux qui n'ont
+                            pas
+                            beaucoup de commandes afin d'avoir un maximum de rendement au lieu d'avoir du stock pour
+                            rien et perdre de l'argent.
+                            Code SQL : </p>
+                        <p class="code">
+                            SELECT Fournisseur.Pays, Count([2c Sr].RefProd) AS NBProdVendu, Sum(Produit.UniteStock)
+                            AS NbStockProd<br>
+                            FROM Fournisseur INNER JOIN ([2c Sr] INNER JOIN Produit ON [2c Sr].RefProd =<br>
+                            Produit.RefProd) ON Fournisseur.NoFour = Produit.NoFour<br>
+                            GROUP BY Fournisseur.Pays<br>
+                            ORDER BY Count([2c Sr].RefProd) DESC;
+                        </p>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+        <!-- Footer : bas de page -->
+        <footer>
+            <div>
+                <h1>KDOU's INDUSTRY</h1>
+            </div>
+            <div>
+                <h2>CONTACT</h2>
+                <div>
+                    <a>06 12 23 32 41</a>
+                    <a>nouscontacter@kdou.com</a>
+                    <a>143 Av. de Versailles</a>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
