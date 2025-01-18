@@ -1,0 +1,179 @@
+@font-face {
+    font-family: bold;
+    src: url(Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: boldd;
+    src: url(Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: regularr;
+    src: url(Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: lightt;
+    src: url(Montserrat-Light.ttf);
+}
+
+* {
+    font-family: regularr;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+/* Nav bar */
+
+.navbar {
+    border-bottom: 1px solid;
+}
+
+.navbar-brand {
+    font-family: boldd;
+}
+
+.dropdown-item {
+    font-family: lightt;
+}
+
+
+/* Qui sommes nous */
+
+.qui {
+    width: 100%;
+}
+
+.qui h1 {
+    font-family: bold;
+    padding-left: 100px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.timeo {
+    border-top: 1px solid;
+}
+
+.nous {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    border-bottom: 1px solid;
+}
+
+.div-img {
+    width: 40%;
+    height: 100%;
+    background-size: cover;
+}
+
+.timeo .div-img {
+    background-image: url(/img/timeo.png);
+}
+
+.abel .div-img {
+    background-image: url(/img/abel.png);
+}
+
+.moad .div-img {
+    background-image: url(/img/moad.png);
+}
+
+
+.nous-txt {
+    margin: 20px 20px 0 20px;
+    width: 60%;
+    text-align: justify;
+}
+
+
+/* Video / comment installer une vm */
+
+.comment {
+    width: 100%;
+}
+
+.carousel-item {
+    height: 75vh;
+}
+
+
+.active {
+    display: flex !important;
+}
+
+
+comment-titre-div {
+    height: 25vh;
+}
+
+.comment h1 {
+    font-family: bold;
+    padding-left: 100px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.carousel {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+}
+
+.carousel-item video {
+    height: 76vh;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    height: fit-content;
+    position: absolute;
+    top: 45% !important;
+    width: auto !important;
+    padding: 5px !important;
+    background-color: black !important;
+    margin: 0 10px !important;
+}
+
+.installer-txt {
+    display: flex;
+    margin: 20px 60px 0 20px;
+    width: 60%;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    padding: 25px 0;
+}
+
+footer h1 {
+    font-family: bold;
+}
+
+footer h5 {
+    font-family: bold;
+}
+
+.navigation p {
+    cursor: pointer;
+}
