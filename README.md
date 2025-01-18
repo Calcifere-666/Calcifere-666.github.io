@@ -1,7 +1,4 @@
-Bonjour, voici le site de Kdou ainsi que son code !
-
-LIEN VERS LE SITE HÉBERGÉ EN CAS DE PROBLÉME :
-https://kdou.shop
+Bonjour, voici le site du rapport de la SAE S1.03 ainsi que son code !
 
 
 
