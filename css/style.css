@@ -100,7 +100,7 @@
 }
 
 
-/* Video / comment installer une vm */
+/* Video / comment marche une vm / comment installer */
 
 .comment {
     width: 100%;
@@ -148,11 +148,15 @@ comment-titre-div {
 
 .installer-txt {
     display: flex;
-    margin: 20px 60px 0 20px;
+    padding: 20px 60px 0 20px;
     width: 60%;
     text-align: justify;
     flex-direction: column;
     justify-content: center;
+}
+
+.gauche {
+    padding: 0 20px 0 60px;
 }
 
 /* Footer */
@@ -177,3 +181,56 @@ footer h5 {
 .navigation p {
     cursor: pointer;
 }
+
+/* Responsive */
+
+@media only screen and (max-width:768px) {
+    .nous {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .nous-txt {
+        width: auto;
+    }
+
+    .comment h1 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .qui h1 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .installer-txt {
+        padding: 20px !important;
+        width: auto;
+    }
+
+    .active {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        height: auto;
+    }
+
+    .installer-txt {
+        padding: 20px 0 0 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20%;
+    }
+
+    h1 {
+        font-size: large !important;
+    }
+    h5 {
+        font-size: large !important;
+    }
+  }

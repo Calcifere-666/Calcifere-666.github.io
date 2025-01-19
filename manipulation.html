@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation MV</title>
+    <link href="/css/style.css" rel="stylesheet" />
+    <link rel="icon" href="img/favicon.png" sizes="192x192" />
+
+    <!-- Lien pour boostrap : -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header : top du site -->
+    <header>
+      <!-- Navbar : barre de déplacement centrale du site  -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">Rendu SAE S1.03</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="/index.html#Qui"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Qui sommes-nous ?
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/index.html#Timeo"
+                      >Timéo Pineau</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/index.html#Moad"
+                      >Mo'Ad Bendjeddou</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/index.html#Abel"
+                      >Abel Chauwin</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/index.html#Comment"
+                  >Comment ça marche ?</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/installation.html"
+                  >Comment l'installer ?</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/manipulation.html"
+                  >Manipulations</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/index.html#Contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main : partie centrale du site -->
+    <main>
+      <!-- Comment installer une VM -->
+      <div id="Comment" class="comment">
+        <div class="comment-titre-div">
+          <h1>Partie 1 : Manipulations</h1>
+        </div>
+        <div id="carousel1" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imgmanipulation/etape1.png" />
+              <div class="installer-txt">
+                <h2>1.1</h2>
+                <p>
+                  CRÉATION D’UN COMPTE ADMIN : <br>
+                  ( nom hors norme, on doit faire un --force-badname pour créer l'utilisateur )
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape2.png" />
+              <div class="installer-txt">
+                <h2>1.2</h2>
+                <p>
+                  Tu te déconnectes de ton compte et tu te connectes sur l'utilisateur que tu viens de créer.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape3.png" />
+              <div class="installer-txt">
+                <h2>1.3</h2>
+                <p>
+                  Tu te déconnectes de ton compte et tu te connectes sur l'utilisateur que tu viens de créer.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape4.png" />
+              <div class="installer-txt">
+                <h2>1.4</h2>
+                <p>
+                  C’est bien un nouveau compte.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape5.png" />
+              <div class="installer-txt">
+                <h2>1.5</h2>
+                <p>
+                  Ajouter l'utilisateur au groupe admin.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape6.png" />
+              <div class="installer-txt">
+                <h2>1.6</h2>
+                <p>
+                  Crée 3 utilisateurs de la même manière, on remarque que l'on peut créer un utilisateur donc on a bel et bien les droits admin.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape7.png" />
+              <div class="installer-txt">
+                <h2>1.7</h2>
+                <p>
+                  On vérifie qu'ils sont bien créés.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape8.png" />
+              <div class="installer-txt">
+                <h2>1.8</h2>
+                <p>
+                  Vérifier qu'ils ont bien été ajoutés.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape9.png" />
+              <div class="installer-txt">
+                <h2>1.9</h2>
+                <p>
+                  On applique les vérifications de l'existence de l'utilisateur dans le système.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape10.png" />
+              <div class="installer-txt">
+                <h2>1.10</h2>
+                <p>
+                  On vérifie ensuite pour le groupe (modifié).
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel1"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel1"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="comment-titre-div">
+          <h1>Étape 2 : Prompts</h1>
+        </div>
+        <div id="carousel2" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imgmanipulation/etape21.png" />
+              <div class="installer-txt">
+                <h2>2.1</h2>
+                <p>
+                  Pour la personnalisation du prompt j'ai regardé les config de
+                  mon prompt perso avec :<code>echo $PS1</code> j'ai donc toutes
+                  les infos sur la personnalisation de mon prompt : <br />
+                  <code>
+                    [\033[0;31m]\342\224\214\342\224\200$([[ $? != 0 ]]
+                    &amp;&amp; echo
+                    "[[\033[0;31m]\342\234\227[\033[0;37m]]\342\224\200")[[\033[0;39m]\u[\033[01;33m]@[\033[01;96m]\h[\033[0;31m]]\342\224\200[[\033[0;32m]\w[\033[0;31m]]<br />
+                    [\033[0;31m]\342\224\224\342\224\200\342\224\200\342\225\274
+                    [\033[0m][\e[01;33m]$[\e[0m]
+                  </code>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape21.png" />
+              <div class="installer-txt">
+                <h2>2.2</h2>
+                <p>
+                  Expliqué en détails ci-dessous <code>\[\033[0;31m\]</code> :
+                  Définit la couleur rouge <code>\342\224\214</code> et
+                  <code>\342\224\200</code> : Ce sont des caractères Unicode
+                  (peut-être des barres verticales/horizontales pour structurer
+                  ton prompt).
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape21.png" />
+              <div class="installer-txt">
+                <h2>2.3</h2>
+                <p>
+                  <strong
+                    >Affichage d'une croix rouge si la dernière commande a
+                    échoué :</strong
+                  >
+                  <code
+                    >$([[ $? != 0 ]] &amp;&amp; echo
+                    "[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200")</code
+                  ><br />
+                  <code>$([[ $? != 0 ]] &amp;&amp; ...)</code> : Vérifie si la
+                  dernière commande s'est terminée avec un code de sortie non
+                  nul (<code>!= 0</code>).<br />
+                  <code>\342\234\227</code> : Représente un caractère Unicode en
+                  forme de croix (<strong>✗</strong>).<br />
+                  <code>\[\033[0;31m\]</code> : Affiche la croix en rouge.<br />
+                  <code>\[\033[0;37m\]</code> : Passe ensuite à la couleur
+                  blanche pour le reste du texte.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape21.png" />
+              <div class="installer-txt">
+                <h2>2.4</h2>
+                <p>
+                  <strong
+                    >Affichage du nom d'utilisateur et de la machine :</strong
+                  >
+                  <code
+                    >[\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h\[\033[0;31m\]]</code
+                  ><br />
+                  <code>\[\033[0;39m\]\u</code> : Nom de l'utilisateur en
+                  couleur par défaut.<br />
+                  <code>\[\033[01;33m\]@\[\033[01;96m\]\h</code> : Séparateur
+                  <code>@</code> en jaune suivi du nom de l'hôte en cyan
+                  clair.<br />
+                  <code>\[\033[0;31m\]</code> : Retour à la couleur rouge pour
+                  fermer les crochets.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape21.png" />
+              <div class="installer-txt">
+                <h2>2.5</h2>
+                <p>
+                  <strong>Affichage du répertoire courant :</strong>
+                  <code>[\[\033[0;32m\]\w\[\033[0;31m\]]</code><br />
+                  <code>\[\033[0;32m\]\w</code> : Affiche le chemin courant
+                  (<code>\w</code>) en vert.<br />
+                  <code>\[\033[0;31m\]</code> : Retourne à la couleur rouge.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape21.png" />
+              <div class="installer-txt">
+                <h2>2.6</h2>
+                <p>
+                  <strong>Nouvelle ligne et structure finale :</strong> 
+                  <code>\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\$\[\e[0m\]</code><br>
+                  <code>\n</code> : Ajoute une nouvelle ligne après les informations.<br>
+                  <code>\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274</code> : Caractères Unicode pour dessiner une ligne ou un séparateur.<br>
+                  <code>\[\e[0m\]</code> : Réinitialise les styles à la fin.
+              </p> 
+              </div>             
+            </div>
+            <div class="carousel-item">
+              <img src="imgmanipulation/etape22.png" />
+              <div class="installer-txt">
+                <h2>2.7</h2>
+                <p>
+                  Le résultat.</p>              
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer : bas de page du site -->
+    <footer id="Contact">
+      <div class="footer-txt">
+        <h1>RENDU SAE S1.03</h1>
+      </div>
+      <div class="footer-txt">
+        <h5>COORDONNÉES</h5>
+        <p>143 Av. de Versailles</p>
+        <p>06 14 23 32 41</p>
+        <p>contact.rendu@sae.com</p>
+        <p>‎</p>
+      </div>
+      <div class="footer-txt navigation">
+        <h5>NAVIGATION</h5>
+        <p onclick="location.href='/index.html'">Accueil</p>
+        <p onclick="location.href='/index.html#Qui'">Qui sommes-nous</p>
+        <p onclick="location.href='/index.html#Comment'">Comment installer</p>
+        <p onclick="location.href='/index.html#Contact'">Contact</p>
+      </div>
+    </footer>
+  </body>
+</html>
